@@ -13,7 +13,7 @@ main {
     padding: 0 16px;
 }
 
-/* Estilização do Botão de Curtida */
+/* Estilo Padrão do Botão (Descurtido) */
 .like-button {
     background-color: #ffffff;
     border: 2px solid #e0e0e0;
@@ -36,6 +36,7 @@ main {
     transform: scale(1.05);
 }
 
+/* Estilo quando estiver Curtido */
 .like-button.liked {
     border-color: #e53935;
     background-color: #ffebee;

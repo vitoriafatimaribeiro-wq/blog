@@ -24,12 +24,25 @@
    <script>
        const likeBtn = document.getElementById('like-btn');
        const likeCount = document.getElementById('like-count');
+       
        let count = 0;
+       let isLiked = false;
 
        likeBtn.addEventListener('click', () => {
-           count++;
+           if (!isLiked) {
+               // Se ainda não curtiu: aumenta o contador e ativa o botão
+               count++;
+               isLiked = true;
+               likeBtn.classList.add('liked');
+           } else {
+               // Se já curtiu: diminui o contador e desativa o botão
+               count--;
+               isLiked = false;
+               likeBtn.classList.remove('liked');
+           }
+           
+           // Atualiza o texto na tela
            likeCount.textContent = count;
-           likeBtn.classList.add('liked');
        });
    </script>
 </body>
