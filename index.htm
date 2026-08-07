@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        header{
-            background-color:#
-            color:
-            text-align:center;
-            max-width: 800px;
-            margin: auto;
-            padding: 16px;
-    </style>
+    <title>Árvores Nativas do Paraná</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
    <header>
-    <h1>Arvores Nativas do Paraná</h1>
+    <h1>Árvores Nativas do Paraná</h1>
     <p>Um pouco mais de conhecimento sobre o estado</p>
    </header> 
+   
    <main>
-    <h2>arvores nativas e sua importancia</h2>
-    <p>conteudo principal</p>
-    
+    <h2>Árvores nativas e sua importância</h2>
+    <p>Conteúdo principal</p>
+
+    <button id="like-btn" class="like-button">
+        ❤️ <span id="like-count">0</span> Curtidas
+    </button>
    </main>
+
+   <script>
+       const likeBtn = document.getElementById('like-btn');
+       const likeCount = document.getElementById('like-count');
+       let count = 0;
+
+       likeBtn.addEventListener('click', () => {
+           count++;
+           likeCount.textContent = count;
+           likeBtn.classList.add('liked');
+       });
+   </script>
 </body>
 </html>
